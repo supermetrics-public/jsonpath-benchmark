@@ -1,0 +1,12 @@
+{
+    "datasets": [
+        {
+            "name": "Tate collection metadata",
+            "description": "Artist and artwork metadata for the Tate collection",
+            "rowAmount": 72733,
+            "sourceUrl": "https:\/\/github.com\/tategallery\/collection",
+            "license": "Creative Commons Zero Public Domain Dedication",
+            "lastUpdated": "2014-10-27"
+        }
+    ]
+}

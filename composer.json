@@ -1,0 +1,27 @@
+{
+    "name": "supermetrics/php-ext-jsonpath-benchmarks",
+    "description": "Benchmark suite for JsonPath-PHP and userland PHP libraries",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Supermetrics\\JsonPath\\Benchmarks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Supermetrics\\JsonPath\\Benchmarks\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "ext-jsonpath": "*",
+        "ext-pcre": "*",
+        "galbar/jsonpath": "*",
+        "php": ">=7.4",
+        "phpbench/phpbench": "dev-master",
+        "remorhaz/php-json-path": "*",
+        "softcreatr/jsonpath": "*"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "runner.bootstrap": "vendor/autoload.php",
+    "runner.path": "tests",
+    "report.generators": {
+        "overview": {
+            "generator": "expression",
+            "aggregate": ["benchmark_class", "subject_name", "variant_name"],
+            "break": ["benchmark"],
+            "title": "JSONPath performance with different libraries, the JsonPath-PHP extension, and native PHP",
+            "description": "JSONPath lookups with different kinds of expressions against datasets of varying sizes",
+            "cols": {
+                "benchmark": null,
+                "subject": null,
+                "set": null,
+                "revs": null,
+                "its": null,
+                "mem_peak": null,
+                "mode": null,
+                "rstdev": null
+            }
+        },
+        "compareToNative": {
+            "generator": "expression",
+            "aggregate": ["benchmark_class", "subject_name"],
+            "break": ["benchmark"],
+            "title": "JSONPath performance with different libraries, the JsonPath-PHP extension, and native PHP",
+            "description": "JSONPath lookups with different kinds of expressions against datasets of varying sizes",
+            "cols": {
+                "benchmark": null,
+                "subject": null,
+                "revs": null,
+                "its": null,
+                "mem_peak": null,
+                "mode": null,
+                "mode_vs_native": "percent_diff(mode(suite[benchmark_name = \"NativePhpBenchmark\" and subject_name = subject_name and variant_name = variant_name][\"result_time_avg\"]), mode(result_time_avg))",
+                "rstdev": null
+            }
+        }
+    }
+}
