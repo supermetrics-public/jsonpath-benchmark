@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Supermetrics\JsonPath\Benchmarks\Tests;
 
-abstract class AbstractJsonPathBenchmark
+abstract class AbstractJsonPathBench
 {
     /**
      * @param string $dataset

@@ -6,7 +6,7 @@ namespace Supermetrics\JsonPath\Benchmarks\Tests;
 
 use Supermetrics\JsonPath\Benchmarks\SoftCreatr;
 
-class SoftCreatrBenchmark extends AbstractJsonPathBenchmark
+class SoftCreatrBench extends AbstractJsonPathBench
 {
     /**
      * @var SoftCreatr

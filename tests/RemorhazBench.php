@@ -9,7 +9,7 @@ use Supermetrics\JsonPath\Benchmarks\Remorhaz;
 /**
  * @Skip
  */
-class RemorhazBenchmark extends AbstractJsonPathBenchmark
+class RemorhazBench extends AbstractJsonPathBench
 {
     /**
      * @var Remorhaz

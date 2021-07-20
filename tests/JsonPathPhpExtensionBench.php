@@ -6,7 +6,7 @@ namespace Supermetrics\JsonPath\Benchmarks\Tests;
 
 use Supermetrics\JsonPath\Benchmarks\JsonPathPhpExtension;
 
-class JsonPathPhpExtensionBenchmark extends AbstractJsonPathBenchmark
+class JsonPathPhpExtensionBench extends AbstractJsonPathBench
 {
     /**
      * @var JsonPathPhpExtension

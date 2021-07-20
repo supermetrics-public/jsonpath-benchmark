@@ -6,7 +6,7 @@ namespace Supermetrics\JsonPath\Benchmarks\Tests;
 
 use Supermetrics\JsonPath\Benchmarks\Galbar;
 
-class GalbarBenchmark extends AbstractJsonPathBenchmark
+class GalbarBench extends AbstractJsonPathBench
 {
     /**
      * @var Galbar

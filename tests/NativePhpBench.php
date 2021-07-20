@@ -6,7 +6,7 @@ namespace Supermetrics\JsonPath\Benchmarks\Tests;
 
 use Supermetrics\JsonPath\Benchmarks\NativePhp;
 
-class NativePhpBenchmark extends AbstractJsonPathBenchmark
+class NativePhpBench extends AbstractJsonPathBench
 {
     /**
      * @var NativePhp
