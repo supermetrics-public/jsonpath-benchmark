@@ -66,6 +66,7 @@ abstract class AbstractJsonPathBench
     public function provideExpressionsForMediumDataset(): \Generator
     {
         yield '$[?(@.yearOfBirth < 1840)]' => ['expression' => '$[?(@.yearOfBirth < 1840)]'];
+        yield '$.*.yearOfDeath'            => ['expression' => '$.*.yearOfDeath'];
     }
 
     public function setUpMediumDataset(): void
@@ -95,7 +96,8 @@ abstract class AbstractJsonPathBench
      */
     public function provideExpressionsForHugeDataset(): \Generator
     {
-        yield '$.artworks.*.title' => ['expression' => '$.artworks.*.title'];
+        yield '$.artworks.*.title'                            => ['expression' => '$.artworks.*.title'];
+        yield '$.artworks[?(@.title =~ /Self( |-)Portrait/)]' => ['expression' => '$.artworks[?(@.title =~ /Self( |-)Portrait/)]'];
     }
 
     public function setUpHugeDataset(): void

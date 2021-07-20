@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace Supermetrics\JsonPath\Benchmarks;
 
+use JsonPath\JsonPath;
+
 class JsonPathPhpExtension
 {
     /**
@@ -12,9 +14,9 @@ class JsonPathPhpExtension
     protected array $dataset = [];
 
     /**
-     * @var \JsonPath
+     * @var JsonPath
      */
-    protected \JsonPath $jsonPath;
+    protected JsonPath $jsonPath;
 
     /**
      * @param string $expression
@@ -32,6 +34,6 @@ class JsonPathPhpExtension
     public function setDataset(array $dataset): void
     {
         $this->dataset  = $dataset;
-        $this->jsonPath = new \JsonPath();
+        $this->jsonPath = new JsonPath();
     }
 }

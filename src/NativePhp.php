@@ -25,8 +25,12 @@ class NativePhp
                 return $this->handleTinyItemRowAmount();
             case '$[?(@.yearOfBirth < 1840)]':
                 return $this->handleMediumArtistsBornBefore1840List();
+            case '$.*.yearOfDeath':
+                return $this->handleMediumArtistsYearOfDeathList();
             case '$.artworks.*.title':
                 return $this->handleHugeArtworkTitleList();
+            case '$.artworks[?(@.title =~ /Self( |-)Portrait/)]':
+                return $this->handleHugeSelfPortraitsList();
             default:
                 printf('ERROR: Expression `%s` not implemented for native PHP test, exiting...', $expression);
                 exit(-1);
@@ -98,6 +102,22 @@ class NativePhp
     /**
      * @return array[]
      */
+    protected function handleMediumArtistsYearOfDeathList(): array
+    {
+        $result = [];
+
+        foreach ($this->dataset as $artist) {
+            if (isset($artist['yearOfDeath'])) {
+                $result[] = $artist['yearOfDeath'];
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * @return array[]
+     */
     protected function handleHugeArtworkTitleList(): array
     {
         $result = [];
@@ -109,6 +129,28 @@ class NativePhp
         foreach ($this->dataset['artworks'] as $item) {
             if (isset($item['title'])) {
                 $result[] = $item['title'];
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * @return array[]
+     */
+    protected function handleHugeSelfPortraitsList(): array
+    {
+        $result = [];
+
+        if (empty($this->dataset['artworks'])) {
+            return [];
+        }
+
+        $pattern = '/Self( |-)Portrait/';
+
+        foreach ($this->dataset['artworks'] as $item) {
+            if (isset($item['title']) && preg_match($pattern, $item['title'])) {
+                $result[] = $item;
             }
         }
 
