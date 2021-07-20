@@ -5,7 +5,7 @@ JsonPath-PHP is a PHP extension that makes it easy to work with data arrays usin
 ## Test subjects
 
 - Native PHP (considered as the baseline for comparison)
-- JsonPath-PHP extension [[GitHub](https://github.com/supermetrics-public/php-ext-jsonpath)]
+- JsonPath-PHP extension [[GitHub](https://github.com/supermetrics-public/pecl-jsonpath)]
 - JSONPath for PHP library by SoftCreatR [[GitHub](https://github.com/SoftCreatR/JSONPath)] [[Packagist](https://packagist.org/packages/softcreatr/jsonpath)]
 - JsonPath library by Galbar [[GitHub](https://github.com/Galbar/JsonPath-PHP)] [[Packagist](https://packagist.org/packages/galbar/jsonpath)]
 
