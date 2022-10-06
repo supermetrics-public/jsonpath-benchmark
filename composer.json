@@ -20,7 +20,7 @@
         "ext-pcre": "*",
         "galbar/jsonpath": "*",
         "php": ">=7.4",
-        "phpbench/phpbench": "dev-master",
+        "phpbench/phpbench": "1.2.6",
         "remorhaz/php-json-path": "*",
         "softcreatr/jsonpath": "*"
     }
