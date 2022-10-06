@@ -13,6 +13,8 @@ abstract class AbstractJsonPathBench
      */
     public function getDataset(string $dataset): array
     {
+        ini_set('memory_limit', '512M');
+
         $data = file_get_contents(dirname(__DIR__) . '/data/' . $dataset . '.json');
         return json_decode($data, true);
     }
